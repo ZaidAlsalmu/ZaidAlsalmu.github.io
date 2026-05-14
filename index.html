@@ -4,20 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zaid Alsalmu | Portfolio</title>
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-
-  <!-- CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
   <div class="ambient" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
 
   <!-- NAVBAR -->
   <header class="header" id="top">
@@ -26,14 +19,13 @@
         <span class="brand-mark"><i class="fa-solid fa-microchip"></i></span>
         <span class="brand-text">ZAID</span>
       </a>
-
       <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
         <i class="fa-solid fa-bars"></i>
       </button>
-
       <ul class="nav-links" id="navLinks">
         <li><a class="nav-link" href="#about">About</a></li>
-        <li><a class="nav-link" href="#quickfacts">Quick Facts</a></li>
+        <li><a class="nav-link nav-link-featured" href="#featured">HTMS</a></li>
+        <li><a class="nav-link" href="#quickfacts">Facts</a></li>
         <li><a class="nav-link" href="#education">Education</a></li>
         <li><a class="nav-link" href="#experience">Experience</a></li>
         <li><a class="nav-link" href="#projects">Projects</a></li>
@@ -50,21 +42,18 @@
         <div class="hero-copy reveal">
           <p class="kicker">
             <i class="fa-solid fa-wand-magic-sparkles"></i>
-            Computer Science & Artificial Intelligence Student (Sophomore)
+            Computer Science &amp; Artificial Intelligence Student (Sophomore)
           </p>
-
           <h1 class="hero-title">
             Zaid <span class="gradient-text">Alsalmu</span>
           </h1>
-
           <p class="hero-subtitle">
             Building practical AI-driven systems — automation workflows, smart web applications, and product-focused tools.
           </p>
-
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#projects">
-              <i class="fa-solid fa-grid-2"></i>
-              Explore Projects
+            <a class="btn btn-primary" href="#featured">
+              <i class="fa-solid fa-star"></i>
+              Featured Project
             </a>
             <a class="btn btn-ghost" href="#contact">
               <i class="fa-solid fa-paper-plane"></i>
@@ -76,16 +65,20 @@
         <div class="hero-visual reveal">
           <div class="profile-card">
             <div class="profile-img-wrap">
-              <img src="C:\Users\zaidx\OneDrive\Pictures\Screenshots\Screenshot 2026-02-07 010653.png" alt="Zaid profile photo" class="profile-img" />
+              <img src="assets/photo.jpg" alt="Zaid Alsalmu" class="profile-img"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='grid'" />
+              <div class="profile-img-placeholder">
+                <i class="fa-solid fa-user"></i>
+              </div>
             </div>
             <div class="profile-stats">
               <div class="stat">
                 <div class="stat-label">Remote Hours</div>
-                <div class="stat-value">250+</div>
+                <div class="stat-value counter" data-target="250">0</div>
               </div>
               <div class="stat">
-                <div class="stat-label">University Credit</div>
-                <div class="stat-value">40h</div>
+                <div class="stat-label">Uni Credit</div>
+                <div class="stat-value counter" data-target="40">0</div>
               </div>
               <div class="stat">
                 <div class="stat-label">Focus</div>
@@ -93,8 +86,6 @@
               </div>
             </div>
           </div>
-
-          
         </div>
       </div>
     </section>
@@ -106,111 +97,207 @@
           <h2><i class="fa-solid fa-user-astronaut"></i> About Me</h2>
           <p class="muted">A clear snapshot of who I am and what I build.</p>
         </div>
-
         <div class="card reveal">
-          <p>
-            I am a Computer Science and Artificial Intelligence student at Effat University, currently in my sophomore year. I approach technology with an analytical mindset and a strong interest in building intelligent, structured systems.
-          </p>
-          <p>
-           My academic foundation began with a 4.0 GPA in high school, where I developed a motion-controlled robotic system as my senior project. That experience introduced me to system design, logic, and problem-solving beyond the classroom.
-          </p>
-          <p>
-            At university, I serve as Vice President of the Artificial Intelligence Club, where I contribute to organizing initiatives and fostering engagement in emerging technologies. Alongside my studies, I independently explore Generative AI, automation workflows, and applied AI solutions.
-          </p>
-          <p>
-            I am particularly interested in designing systems that improve efficiency, clarity, and decision-making through intelligent technology.
-          </p>
+          <p>I am a Computer Science and Artificial Intelligence student at Effat University, currently in my sophomore year. I approach technology with an analytical mindset and a strong interest in building intelligent, structured systems.</p>
+          <p>My academic foundation began with a 4.0 GPA in high school, where I developed a motion-controlled robotic system as my senior project. That experience introduced me to system design, logic, and problem-solving beyond the classroom.</p>
+          <p>At university, I serve as Vice President of the Artificial Intelligence Club, where I contribute to organizing initiatives and fostering engagement in emerging technologies. Alongside my studies, I independently explore Generative AI, automation workflows, and applied AI solutions.</p>
+          <p>I am particularly interested in designing systems that improve efficiency, clarity, and decision-making through intelligent technology.</p>
         </div>
       </div>
     </section>
 
-    <!-- QUICK FACTS (UPDATED like your screenshot) -->
+    <!-- FEATURED — HTMS -->
+    <section id="featured" class="section featured-section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2><i class="fa-solid fa-star"></i> Featured Project</h2>
+          <p class="muted">A course project I am proud of — built as part of CS3081 at Effat University.</p>
+        </div>
+
+        <div class="htms-card reveal">
+          <div class="htms-left">
+            <div class="htms-badge">
+              <i class="fa-solid fa-traffic-light"></i>
+              CS3081 &nbsp;·&nbsp; AI &nbsp;·&nbsp; Spring 2026
+            </div>
+
+            <h3 class="htms-title">
+              Hajj Traffic Management<br>
+              System <span class="htms-abbr">(HTMS)</span>
+            </h3>
+
+            <p class="htms-desc">
+              A four-agent multi-agent simulation that manages extreme vehicular
+              traffic surges during the Hajj pilgrimage. The system combines
+              Bayesian congestion estimation, CSP-based signal control, BDI vehicle
+              navigation, and rule-based emergency pre-emption — all coordinated
+              through a FIPA-ACL message bus.
+            </p>
+
+            <div class="htms-highlight">
+              <i class="fa-solid fa-lightbulb"></i>
+              <span>
+                Key contribution: <strong>RAPCSP</strong> (Ritual-Aware Predictive
+                CSP) — a novel extension that uses the known Hajj schedule to
+                pre-allocate green time <em>before</em> surges arrive at the sensor.
+              </span>
+            </div>
+
+            <div class="htms-agents">
+              <div class="agent-chip chip-teal">
+                <i class="fa-solid fa-road"></i>
+                <div>
+                  <div class="chip-name">Road Agent</div>
+                  <div class="chip-tech">Bayesian + A*</div>
+                </div>
+              </div>
+              <div class="agent-chip chip-gold">
+                <i class="fa-solid fa-traffic-light"></i>
+                <div>
+                  <div class="chip-name">Intersection Agent</div>
+                  <div class="chip-tech">CSP + RAPCSP</div>
+                </div>
+              </div>
+              <div class="agent-chip chip-green">
+                <i class="fa-solid fa-car"></i>
+                <div>
+                  <div class="chip-name">Vehicle Agent</div>
+                  <div class="chip-tech">BDI + A*</div>
+                </div>
+              </div>
+              <div class="agent-chip chip-red">
+                <i class="fa-solid fa-truck-medical"></i>
+                <div>
+                  <div class="chip-name">Emergency Agent</div>
+                  <div class="chip-tech">Rule-Based</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="htms-actions">
+              <a class="btn btn-primary" href="https://github.com/skuwii/hajj_traffic"
+                 target="_blank" rel="noopener">
+                <i class="fa-brands fa-github"></i>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="htms-right">
+            <div class="htms-stats">
+              <div class="hstat">
+                <div class="hstat-val">39%</div>
+                <div class="hstat-label">Faster emergency response</div>
+              </div>
+              <div class="hstat">
+                <div class="hstat-val">24/24</div>
+                <div class="hstat-label">Unit tests passing</div>
+              </div>
+              <div class="hstat">
+                <div class="hstat-val">4</div>
+                <div class="hstat-label">Specialised AI agents</div>
+              </div>
+              <div class="hstat">
+                <div class="hstat-val">9/10</div>
+                <div class="hstat-label">Vehicles arrived on time</div>
+              </div>
+            </div>
+
+            <div class="htms-tech-block">
+              <div class="tech-block-title">Tech Stack</div>
+              <div class="tech-pills">
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">Mesa</span>
+                <span class="tech-pill">NetworkX</span>
+                <span class="tech-pill">Matplotlib</span>
+                <span class="tech-pill">FIPA-ACL</span>
+                <span class="tech-pill">A* Search</span>
+                <span class="tech-pill">CSP</span>
+                <span class="tech-pill">BDI</span>
+              </div>
+
+              <div class="tech-block-title" style="margin-top:18px;">Team</div>
+              <div class="team-list">
+                <div class="team-member">
+                  <span class="tm-dot dot-gold"></span>
+                  <span><strong>Zaid Alsalmu</strong> — Intersection Agent &amp; RAPCSP</span>
+                </div>
+                <div class="team-member">
+                  <span class="tm-dot dot-teal"></span>
+                  <span>Yousef Jubili — Road Agent &amp; Integration</span>
+                </div>
+                <div class="team-member">
+                  <span class="tm-dot dot-green"></span>
+                  <span>Mohammed Rahil — Vehicle Agent</span>
+                </div>
+                <div class="team-member">
+                  <span class="tm-dot dot-red"></span>
+                  <span>Firas Saadeddin — Emergency Agent</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK FACTS -->
     <section id="quickfacts" class="section">
       <div class="container">
         <div class="section-head reveal">
           <h2><i class="fa-solid fa-satellite"></i> Quick Facts</h2>
           <p class="muted">Fast context — clean, simple, and true.</p>
         </div>
-
         <div class="facts-grid facts-top">
-          <div class="fact-card reveal">
+          <div class="fact-card reveal" style="--delay:0ms">
             <div class="fact-icon"><i class="fa-solid fa-location-dot"></i></div>
-            <div class="fact-text">
-              <div class="fact-label">BASED IN</div>
-              <div class="fact-value">Saudi Arabia</div>
-            </div>
+            <div><div class="fact-label">BASED IN</div><div class="fact-value">Saudi Arabia</div></div>
           </div>
-
-          <div class="fact-card reveal">
+          <div class="fact-card reveal" style="--delay:80ms">
             <div class="fact-icon"><i class="fa-solid fa-calendar-day"></i></div>
-            <div class="fact-text">
-              <div class="fact-label">BORN</div>
-              <div class="fact-value">22 Oct 2005</div>
-            </div>
+            <div><div class="fact-label">BORN</div><div class="fact-value">22 Oct 2005</div></div>
           </div>
-
-          <div class="fact-card reveal">
+          <div class="fact-card reveal" style="--delay:160ms">
             <div class="fact-icon"><i class="fa-solid fa-globe"></i></div>
-            <div class="fact-text">
-              <div class="fact-label">LANGUAGES</div>
-              <div class="fact-value">Arabic, English, French, German</div>
-            </div>
+            <div><div class="fact-label">LANGUAGES</div><div class="fact-value">Arabic, English, French, German</div></div>
           </div>
-
-          <div class="fact-card reveal">
+          <div class="fact-card reveal" style="--delay:240ms">
             <div class="fact-icon"><i class="fa-solid fa-book-open"></i></div>
-            <div class="fact-text">
-              <div class="fact-label">MAJOR</div>
-              <div class="fact-value">CS & Artificial Intelligence</div>
-            </div>
+            <div><div class="fact-label">MAJOR</div><div class="fact-value">CS &amp; Artificial Intelligence</div></div>
           </div>
         </div>
-
         <div class="facts-bottom-wrap">
           <div class="facts-grid facts-bottom">
-            <div class="fact-card reveal">
+            <div class="fact-card reveal" style="--delay:0ms">
               <div class="fact-icon"><i class="fa-solid fa-people-group"></i></div>
-              <div class="fact-text">
-                <div class="fact-label">LEADERSHIP</div>
-                <div class="fact-value">Vice President, AI Club</div>
-              </div>
+              <div><div class="fact-label">LEADERSHIP</div><div class="fact-value">Vice President, AI Club</div></div>
             </div>
-
-            <div class="fact-card reveal">
+            <div class="fact-card reveal" style="--delay:80ms">
               <div class="fact-icon"><i class="fa-solid fa-clock"></i></div>
-              <div class="fact-text">
-                <div class="fact-label">WORK HOURS</div>
-                <div class="fact-value">250+ hours at Assap KSA</div>
-              </div>
+              <div><div class="fact-label">WORK HOURS</div><div class="fact-value">250+ hours at Assap KSA</div></div>
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
-    <!-- EDUCATION (UPDATED like your screenshot) -->
+    <!-- EDUCATION -->
     <section id="education" class="section">
       <div class="container">
         <div class="section-head reveal">
           <h2><i class="fa-solid fa-university"></i> Education</h2>
           <p class="muted">Academic background and milestones.</p>
         </div>
-
         <article class="edu-card reveal">
-          <div class="edu-icon">
-            <i class="fa-solid fa-graduation-cap"></i>
-          </div>
-
+          <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
           <div class="edu-content">
             <div class="edu-top">
               <div>
                 <h3>Effat University</h3>
-                <p class="edu-subtitle">Bachelor's in Computer Science & Artificial Intelligence</p>
+                <p class="edu-subtitle">Bachelor's in Computer Science &amp; Artificial Intelligence</p>
               </div>
               <span class="edu-date">Sep 2024 – Present</span>
             </div>
-
             <ul class="edu-list">
               <li>Vice President, Artificial Intelligence Club</li>
               <li>Building projects independently (AI, automation, web apps)</li>
@@ -218,12 +305,8 @@
             </ul>
           </div>
         </article>
-
         <article class="edu-card reveal">
-          <div class="edu-icon">
-            <i class="fa-solid fa-school"></i>
-          </div>
-
+          <div class="edu-icon"><i class="fa-solid fa-school"></i></div>
           <div class="edu-content">
             <div class="edu-top">
               <div>
@@ -232,7 +315,6 @@
               </div>
               <span class="edu-date">June 2023</span>
             </div>
-
             <ul class="edu-list">
               <li>Graduated with 4.0 GPA</li>
               <li>SAT Completed</li>
@@ -240,7 +322,6 @@
             </ul>
           </div>
         </article>
-
       </div>
     </section>
 
@@ -251,14 +332,13 @@
           <h2><i class="fa-solid fa-briefcase"></i> Experience</h2>
           <p class="muted">Real work exposure, communication, and execution.</p>
         </div>
-
         <div class="stack">
           <article class="card reveal">
             <div class="card-top">
               <h3>Technical Assistant to the CEO — Assap KSA</h3>
               <span class="pill">Jan 2024 — Mar 2024</span>
             </div>
-            <p class="muted">Casting & Architecture Contracting Company</p>
+            <p class="muted">Casting &amp; Architecture Contracting Company</p>
             <ul class="list">
               <li><i class="fa-solid fa-circle-nodes"></i> Joined executive meetings and construction site visits</li>
               <li><i class="fa-solid fa-file-lines"></i> Organized documents and improved clarity for communication</li>
@@ -266,16 +346,15 @@
               <li><i class="fa-solid fa-language"></i> Translated documents to ensure precision and understanding</li>
             </ul>
           </article>
-
           <article class="card reveal">
             <div class="card-top">
-              <h3>Remote Work (Documentation & Clarity) — Assap KSA</h3>
+              <h3>Remote Work (Documentation &amp; Clarity) — Assap KSA</h3>
               <span class="pill">Sep 2024 — Present</span>
             </div>
             <ul class="list">
-              <li><i class="fa-solid fa-laptop-code"></i> Remote support from home for 250+ hours (documentation, translation, clarity)</li>
+              <li><i class="fa-solid fa-laptop-code"></i> Remote support for 250+ hours (documentation, translation, clarity)</li>
               <li><i class="fa-solid fa-shield-halved"></i> Maintained consistent document structure and communication quality</li>
-              <li><i class="fa-solid fa-award"></i> Includes 40 hours completed for university credit (within this role)</li>
+              <li><i class="fa-solid fa-award"></i> Includes 40 hours completed for university credit</li>
             </ul>
           </article>
         </div>
@@ -287,75 +366,102 @@
       <div class="container">
         <div class="section-head reveal">
           <h2><i class="fa-solid fa-hexagon-nodes"></i> Projects</h2>
-          <p class="muted">AI + automation + product-focused systems (in progress / not published yet).</p>
+          <p class="muted">AI + automation + product-focused systems.</p>
         </div>
-
         <div class="projects-grid">
-          <article class="project reveal">
+
+          <article class="project reveal" style="--delay:0ms">
+            <div class="project-title">
+              <h3>Claude Sharper</h3>
+              <span class="pill pill-soft">In Progress</span>
+            </div>
+            <p>A token-optimization tool for Claude. Rewrites and compresses prompts before sending, reducing token usage while preserving intent and quality — built for developers and heavy Claude users.</p>
+            <div class="tags">
+              <span class="tag">Generative AI</span>
+              <span class="tag">Token Optimization</span>
+              <span class="tag">Claude API</span>
+              <span class="tag">Python</span>
+            </div>
+          </article>
+
+          <article class="project reveal" style="--delay:80ms">
             <div class="project-title">
               <h3>AI CV Creator</h3>
               <span class="pill pill-soft">In Progress</span>
             </div>
             <p>AI-assisted CV builder that generates structured sections with smart suggestions and clean formatting.</p>
             <div class="tags">
-              <span class="tag">Generative AI</span><span class="tag">Prompt Engineering</span><span class="tag">Web App</span>
+              <span class="tag">Generative AI</span>
+              <span class="tag">Prompt Engineering</span>
+              <span class="tag">Web App</span>
             </div>
           </article>
 
-          <article class="project reveal">
+          <article class="project reveal" style="--delay:160ms">
             <div class="project-title">
               <h3>AI Price Aggregator</h3>
               <span class="pill pill-soft">In Progress</span>
             </div>
             <p>Compares prices across multiple retail stores for the same product using automation and data consolidation.</p>
             <div class="tags">
-              <span class="tag">Automation</span><span class="tag">Data Aggregation</span><span class="tag">Product Thinking</span>
+              <span class="tag">Automation</span>
+              <span class="tag">Data Aggregation</span>
+              <span class="tag">Product Thinking</span>
             </div>
           </article>
 
-          <article class="project reveal">
+          <article class="project reveal" style="--delay:0ms">
             <div class="project-title">
               <h3>AI News Summarizer</h3>
               <span class="pill pill-soft">In Progress</span>
             </div>
             <p>Collects news from multiple sources and produces concise AI summaries in a single interface.</p>
             <div class="tags">
-              <span class="tag">NLP</span><span class="tag">Summarization</span><span class="tag">Web</span>
+              <span class="tag">NLP</span>
+              <span class="tag">Summarization</span>
+              <span class="tag">Web</span>
             </div>
           </article>
 
-          <article class="project reveal">
-            <div class="project-title">
-              <h3>Smart Notes Interface</h3>
-              <span class="pill pill-soft">Concept</span>
-            </div>
-            <p>A keyboard-first note system designed to feel natural and allow multiple notes inside one page.</p>
-            <div class="tags">
-              <span class="tag">UX</span><span class="tag">Productivity</span><span class="tag">Interface</span>
-            </div>
-          </article>
-
-          <article class="project reveal">
+          <article class="project reveal" style="--delay:80ms">
             <div class="project-title">
               <h3>AI Maze Generator</h3>
               <span class="pill pill-soft">In Progress</span>
             </div>
             <p>Generates mazes using algorithmic logic with AI-inspired heuristics for difficulty and path complexity.</p>
             <div class="tags">
-              <span class="tag">Algorithms</span><span class="tag">AI Logic</span><span class="tag">Problem Solving</span>
+              <span class="tag">Algorithms</span>
+              <span class="tag">AI Logic</span>
+              <span class="tag">Problem Solving</span>
             </div>
           </article>
 
-          <article class="project reveal">
+          <article class="project reveal" style="--delay:160ms">
             <div class="project-title">
-              <h3>Smart Classroom Reservation System</h3>
+              <h3>Smart Classroom Reservation</h3>
               <span class="pill pill-soft">Built</span>
             </div>
-            <p>Seat reservation platform for labs/classrooms to book chairs in advance with structured availability flow.</p>
+            <p>Seat reservation platform for labs and classrooms to book chairs in advance with structured availability flow.</p>
             <div class="tags">
-              <span class="tag">System Design</span><span class="tag">Scheduling</span><span class="tag">Database</span>
+              <span class="tag">System Design</span>
+              <span class="tag">Scheduling</span>
+              <span class="tag">Database</span>
             </div>
           </article>
+
+          <article class="project reveal" style="--delay:0ms">
+            <div class="project-title">
+              <h3>Smart Notes Interface</h3>
+              <span class="pill pill-soft">Concept</span>
+            </div>
+            <p>A keyboard-first note system designed to feel natural and allow multiple notes inside one page.</p>
+            <div class="tags">
+              <span class="tag">UX</span>
+              <span class="tag">Productivity</span>
+              <span class="tag">Interface</span>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
@@ -365,14 +471,13 @@
       <div class="container">
         <div class="section-head reveal">
           <h2><i class="fa-solid fa-robot"></i> Skills</h2>
-          <p class="muted">Grouped for clarity. Designed to look premium (not basic tags).</p>
+          <p class="muted">Grouped for clarity.</p>
         </div>
-
         <div class="skills-grid">
           <div class="skill-card reveal">
             <div class="skill-head">
               <i class="fa-solid fa-brain"></i>
-              <h3>AI & Automation</h3>
+              <h3>AI &amp; Automation</h3>
             </div>
             <ul class="skill-list">
               <li><span>Generative AI</span><span class="bar" data-level="85"></span></li>
@@ -380,45 +485,35 @@
               <li><span>Automation Workflows</span><span class="bar" data-level="80"></span></li>
             </ul>
           </div>
-
           <div class="skill-card reveal">
             <div class="skill-head">
               <i class="fa-solid fa-code"></i>
               <h3>Programming</h3>
             </div>
             <div class="pill-grid">
-              <span class="pill2">Python</span>
-              <span class="pill2">Java</span>
-              <span class="pill2">C++</span>
-              <span class="pill2">JavaScript</span>
-              <span class="pill2">PHP</span>
-              <span class="pill2">Swift</span>
+              <span class="pill2">Python</span><span class="pill2">Java</span>
+              <span class="pill2">C++</span><span class="pill2">JavaScript</span>
+              <span class="pill2">PHP</span><span class="pill2">Swift</span>
             </div>
           </div>
-
           <div class="skill-card reveal">
             <div class="skill-head">
               <i class="fa-solid fa-globe"></i>
               <h3>Web</h3>
             </div>
             <div class="pill-grid">
-              <span class="pill2">HTML</span>
-              <span class="pill2">CSS</span>
-              <span class="pill2">Responsive UI</span>
-              <span class="pill2">Web Apps</span>
+              <span class="pill2">HTML</span><span class="pill2">CSS</span>
+              <span class="pill2">Responsive UI</span><span class="pill2">Web Apps</span>
             </div>
           </div>
-
           <div class="skill-card reveal">
             <div class="skill-head">
               <i class="fa-solid fa-database"></i>
-              <h3>Data & Tools</h3>
+              <h3>Data &amp; Tools</h3>
             </div>
             <div class="pill-grid">
-              <span class="pill2">SQL</span>
-              <span class="pill2">Excel</span>
-              <span class="pill2">Documentation</span>
-              <span class="pill2">Translation & Clarity</span>
+              <span class="pill2">SQL</span><span class="pill2">Excel</span>
+              <span class="pill2">Documentation</span><span class="pill2">Translation</span>
             </div>
           </div>
         </div>
@@ -430,9 +525,8 @@
       <div class="container">
         <div class="section-head reveal">
           <h2><i class="fa-solid fa-signal"></i> Contact</h2>
-          <p class="muted">Email + GitHub only.</p>
+          <p class="muted">Email + GitHub.</p>
         </div>
-
         <div class="contact-grid">
           <a class="contact-card reveal" href="mailto:zzalsalmu@effat.edu.sa">
             <i class="fa-solid fa-envelope"></i>
@@ -441,16 +535,14 @@
               <div class="contact-value">zzalsalmu@effat.edu.sa</div>
             </div>
           </a>
-
-          <a class="contact-card reveal" href="#">
+          <a class="contact-card reveal" href="https://github.com/skuwii" target="_blank" rel="noopener">
             <i class="fa-brands fa-github"></i>
             <div>
               <div class="contact-title">GitHub</div>
-              <div class="contact-value">Add your username</div>
+              <div class="contact-value">github.com/skuwii</div>
             </div>
           </a>
         </div>
-
         <footer class="footer reveal">
           <p>© <span id="year"></span> Zaid Alsalmu. All rights reserved.</p>
         </footer>
